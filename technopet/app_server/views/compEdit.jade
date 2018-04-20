@@ -1,0 +1,44 @@
+extends layout
+
+block content
+  .row.page-header
+    .col-lg-12
+      h1= title
+  .row
+    .col-xs-12.col-md-6
+      form.form-horizontal(action="/location", method="get", role="form")
+        .form-group
+          label.col-xs-10.col-sm-2.control-label(for="nombre") Nombre
+          .col-xs-12.col-sm-10
+            input#name.form-control(name="nombre")
+        .form-group
+          label.col-xs-10.col-sm-2.control-label(for="ubicacion") Ubicaciòn
+          .col-xs-12.col-sm-10
+            input#name.form-control(name="ubicacion")
+        .form-group
+          label.col-xs-10.col-sm-2.control-label(for="tipo") Tipo
+          .col-xs-12.col-sm-10
+            input#name.form-control(name="tipo")
+        .form-group
+          label.col-xs-10.col-sm-2.control-label(for="protocolo") Protocolo
+          .col-xs-12.col-sm-10
+            input#name.form-control(name="protocolo")
+        .form-group
+          label.col-xs-10.col-sm-2.control-label(for="direccion") Direcciòn
+          .col-xs-12.col-sm-10
+            input#name.form-control(name="direccion")
+        .form-group
+          label.col-xs-10.col-sm-2.control-label(for="activar") Activar
+          .col-xs-12.col-sm-10
+            input#name.form-control(name="activar")
+        .form-group
+          label.col-xs-10.col-sm-2.control-label(for="ubiMap") Ubicacion en mapa
+          .col-xs-12.col-sm-10
+            input#name.form-control(name="ubiMap")
+        .form-group
+          label.col-sm-2.control-label(for="comentarios") Comentarios
+          .col-sm-10
+            textarea#review.form-control(name="comentarios", rows="5")
+        button.btn.btn-default.pull-right Guardar
+        button.btn.btn-default.pull-right Cancelar
+    .col-xs-12.col-md-4

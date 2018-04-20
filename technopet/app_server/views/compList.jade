@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  #banner.page-header
+    .row
+      .col-gl-6
+        h1= pageHeader.title
+          small &nbsp;#{pageHeader.strapline}
+  .row
+    .col-xs-12.col-sm-8
+      .row.list-group
+       each componente in componentes
+        .col-xs-12.list-group-item
+          h4 
+            a(href="/comp/detalles")= componente.nombre
+            small &nbsp;
+          p.address= componente.ubicacion
+          p
+          span.label.label-warning Luces
+          |&nbsp;
+          span.label.label-warning Movimiento
+          |&nbsp;
+    .col-xs-12.col-sm-4
+      p.lead Lista de componentes

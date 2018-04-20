@@ -1,0 +1,35 @@
+extends layout
+
+block content
+   .row.page-header
+     .col-lg-12
+       h1  Sensor de movimiento 25
+   .row
+     .col-xs-12.col-md-9
+       .row
+         .col-xs-12.col-sm-6
+           p Ubicaciòn: Aula 2
+            .panel.panel-primary 
+              .panel-heading
+               h2.panel-title Detalles
+              .pane-body
+                   p Tipo: Sensor de moviento
+                   p Protocolo: TCP/IP
+                   p Direcciòn: 192.168.0.2
+                   p Activar  Si
+                   p Ubicaciòn en mapa: 80 152
+            .panel.panel-primary 
+              .panel-heading
+                h2.panel-title Observaciones
+              .pane-body
+                p Este sensor se instalò con la finalidad de detectar la presencia de personas en el area
+       .row
+         .col-xs-12
+           .panel.panel-primary.review-panel
+             .panel-heading
+               a.btn.btn-default.pull-right(href="/comp/Edit") Editar
+           
+               a.btn.btn-default.pull-right(href="/") Eliminar
+
+
+ 
