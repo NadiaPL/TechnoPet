@@ -1,2 +1,39 @@
 https://github.com/fivdi/pigpio#measure-distance-with-a-hc-sr04-ultrasonic-sensor
 http://www.instructables.com/id/Servo-Motor-Control-With-Raspberry-Pi/
+
+
+char estado = 'X';
+// the setup routine runs once when you press reset:
+void setup() {
+  pinMode(13, OUTPUT);
+  // initialize serial communication at 9600 bits per second:
+  Serial.begin(9600);
+  
+}
+
+// the loop routine runs over and over again forever:
+void loop() {
+ if(Serial.available()>0){           // Si el puerto serie esta habilitadp 
+        estado = Serial.read();      // Lee lo que llega por el puerto Serie
+ }
+
+ switch (estado) {
+    case 'V':
+           Serial.print("encendido"); // envía "Hello World!".
+           digitalWrite(13, HIGH);   // turn the LED on (HIGH is the voltage level)
+           //delay(1000);                       // wait for a second
+      break;
+      
+    case 'U':
+           Serial.print("apagado"); // envía "Hello World!".
+           digitalWrite(13, LOW);    // turn the LED off by making the voltage LOW
+           delay(1000);                       // wait for a second
+      break;
+   
+   default: 
+            Serial.print("apagadoxxxxxxxxxxxx"); // envía "Hello World!".
+           digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
+           delay(1000);   
+    break;
+  }
+}
