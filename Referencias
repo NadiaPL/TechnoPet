@@ -1,6 +1,7 @@
 https://github.com/fivdi/pigpio#measure-distance-with-a-hc-sr04-ultrasonic-sensor
 http://www.instructables.com/id/Servo-Motor-Control-With-Raspberry-Pi/
 
+https://www.hackster.io/charifmahmoudi/arduino-mkr1000-getting-started-08bb4a
 
 char estado = 'X';
 // the setup routine runs once when you press reset:
